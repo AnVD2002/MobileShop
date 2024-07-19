@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: InternAGESTproject
+
+  security:
+    oauth2:
+      resource server:
+        jwt:
+          issuer-uri: https://dev-hpv6ojht2mpw345x.us.auth0.com/
+          audiences: https://auth0
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/mobileshop
+    username: root
+    password: 15072002.Pl
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jackson:
+    serialization:
+      indent_output: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.your.package: DEBUG
+
+
+
+
+
+
+
+
