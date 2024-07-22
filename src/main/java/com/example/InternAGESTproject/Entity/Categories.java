@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -22,8 +23,14 @@ public class Categories {
     private String name;
     @Column(name = "image")
     private String image;
+    @Column(name = "create_at")
+    private LocalDate createAt;
+    @Column(name = "update_at")
+    private LocalDate updateAt;
+    @Column(name = "status")
+    private Boolean status;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
-    @JsonManagedReference("category-products")
-    private List<Products> products;
+    @JsonManagedReference("category-productTypes")
+    private List<ProductTypes> productTypes;
 }

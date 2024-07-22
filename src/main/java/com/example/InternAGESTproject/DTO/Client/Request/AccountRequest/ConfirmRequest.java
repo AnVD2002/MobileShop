@@ -1,4 +1,4 @@
-package com.example.InternAGESTproject.DTO.Client.Request;
+package com.example.InternAGESTproject.DTO.Client.Request.AccountRequest;
 
 import com.example.InternAGESTproject.DTO.Client.Response.SignUpResponse;
 import lombok.AllArgsConstructor;

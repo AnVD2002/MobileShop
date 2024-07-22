@@ -1,10 +1,9 @@
 package com.example.InternAGESTproject.Service.Client.AccountService.Impl;
 
 import com.example.InternAGESTproject.Config.JWTConfig.JwtProvider;
-import com.example.InternAGESTproject.DTO.Client.Request.LoginRequest;
+import com.example.InternAGESTproject.DTO.Client.Request.AccountRequest.LoginRequest;
 import com.example.InternAGESTproject.DTO.Client.Response.LoginResponse;
 import com.example.InternAGESTproject.Entity.CustomUserDetails;
-import com.example.InternAGESTproject.Entity.RoleEnum;
 import com.example.InternAGESTproject.Repository.UserRepository;
 import com.example.InternAGESTproject.Service.Client.AccountService.Interface.LoginService;
 import lombok.RequiredArgsConstructor;

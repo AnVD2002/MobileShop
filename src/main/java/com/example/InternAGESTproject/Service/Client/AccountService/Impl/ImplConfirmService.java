@@ -1,6 +1,6 @@
 package com.example.InternAGESTproject.Service.Client.AccountService.Impl;
 
-import com.example.InternAGESTproject.DTO.Client.Request.ConfirmRequest;
+import com.example.InternAGESTproject.DTO.Client.Request.AccountRequest.ConfirmRequest;
 import com.example.InternAGESTproject.Entity.RoleEnum;
 import com.example.InternAGESTproject.Entity.Roles;
 import com.example.InternAGESTproject.Entity.User;

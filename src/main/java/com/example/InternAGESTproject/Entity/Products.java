@@ -23,14 +23,35 @@ public class Products {
     private String productName;
     @Column(name = "description")
     private String description;
-    @Column(name = "category_id",insertable = false, updatable = false)
-    private Long categoryID;
+    @Column(name = "product_type_id",insertable = false, updatable = false)
+    private Long productTypeID;
     @Column(name = "create_at")
     private LocalDate createAt;
     @Column(name = "update_at")
     private LocalDate updateAt;
     @Column(name = "price")
     private Double price;
+    @Column(name = "status")
+    private Boolean status;
+    @Column(name = "screen")
+    private String screen;
+    @Column(name="os")
+    private String os;
+    @Column(name = "camera")
+    private String camera;
+    @Column(name = "camera_selfie")
+    private String cameraSelfie;
+    @Column(name = "cpu")
+    private String cpu;
+    @Column(name = "ram")
+    private String ram;
+    @Column(name = "rom")
+    private String rom;
+    @Column(name = "pin")
+    private String pin;
+    @Column(name = "design")
+    private String design;
+
 
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "product")
@@ -38,9 +59,9 @@ public class Products {
     List<ProductVariants> productVariants;
 
     @ManyToOne
-    @JsonBackReference("category-products")
-    @JoinColumn(name = "category_id")
-    private Categories category;
+    @JsonBackReference("productType-products")
+    @JoinColumn(name = "product_type_id")
+    private ProductTypes productType;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     @JsonManagedReference("product-productProperties")
@@ -57,6 +78,8 @@ public class Products {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     @JsonManagedReference("product-productDetails")
     private List<ProductDetails> productDetails;
+
+
 
 
 }

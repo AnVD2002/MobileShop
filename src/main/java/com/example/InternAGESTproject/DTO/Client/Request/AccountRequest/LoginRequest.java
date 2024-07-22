@@ -1,4 +1,4 @@
-package com.example.InternAGESTproject.DTO.Client.Request;
+package com.example.InternAGESTproject.DTO.Client.Request.AccountRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
